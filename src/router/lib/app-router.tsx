@@ -1,13 +1,14 @@
-import React from 'react';
-import AppRoutes from './app-routes';
-import {NativeRouter} from 'react-router-native';
+import React from "react"
+import { NativeRouter } from "react-router-native"
+
+import AppRoutes from "./app-routes"
 
 export function AppRouter() {
-  return (
-    <NativeRouter>
-      <AppRoutes />
-    </NativeRouter>
-  );
+    return (
+        <NativeRouter>
+            <AppRoutes />
+        </NativeRouter>
+    )
 }
 
-export default AppRouter;
+export default AppRouter

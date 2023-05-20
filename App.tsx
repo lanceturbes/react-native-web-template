@@ -1,15 +1,16 @@
-import React from 'react';
-import {NativeBaseProvider} from 'native-base';
+import { NativeBaseProvider } from "native-base"
+import React from "react"
 
-import {colorModeManager, themeConfig} from '@./theme';
-import {AppRouter} from '@./router';
+import { AppRouter } from "@./router"
+import { colorModeManager, themeConfig } from "@./theme"
 
 export default function App() {
-  return (
-    <NativeBaseProvider
-      config={themeConfig}
-      colorModeManager={colorModeManager}>
-      <AppRouter />
-    </NativeBaseProvider>
-  );
+    return (
+        <NativeBaseProvider
+            config={themeConfig}
+            colorModeManager={colorModeManager}
+        >
+            <AppRouter />
+        </NativeBaseProvider>
+    )
 }

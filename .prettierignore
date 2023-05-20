@@ -1,0 +1,11 @@
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+build
+coverage
+android
+ios
+.bundle
+yarn.lock
+Gemfile

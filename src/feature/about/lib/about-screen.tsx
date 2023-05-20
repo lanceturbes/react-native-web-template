@@ -1,12 +1,12 @@
-import React from 'react';
-import {Text, View} from 'native-base';
+import { Text, View } from "native-base"
+import React from "react"
 
 export function AboutScreen() {
-  return (
-    <View>
-      <Text>AboutScreen</Text>
-    </View>
-  );
+    return (
+        <View>
+            <Text>AboutScreen</Text>
+        </View>
+    )
 }
 
-export default AboutScreen;
+export default AboutScreen

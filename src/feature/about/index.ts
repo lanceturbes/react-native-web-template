@@ -1,1 +1,1 @@
-export * from './lib/about-screen';
+export * from "./lib/about-screen"

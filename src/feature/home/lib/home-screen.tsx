@@ -1,12 +1,12 @@
-import React from 'react';
-import {Text, View} from 'native-base';
+import { Text, View } from "native-base"
+import React from "react"
 
 export function HomeScreen() {
-  return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
-  );
+    return (
+        <View>
+            <Text>Home Screen</Text>
+        </View>
+    )
 }
 
-export default HomeScreen;
+export default HomeScreen
