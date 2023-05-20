@@ -1,5 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
+const {HotModuleReplacementPlugin, DefinePlugin} = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const appDirectory = path.resolve(__dirname, '..');
@@ -9,6 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const compileNodeModules = [
   // Add every react-native package that needs compiling
   // 'react-native-gesture-handler',
+  // 'react-native-linear-gradient',
 ].map(moduleName => path.resolve(appDirectory, `node_modules/${moduleName}`));
 
 const babelLoaderConfiguration = {
@@ -53,6 +54,7 @@ module.exports = {
     extensions: ['.web.tsx', '.web.ts', '.tsx', '.ts', '.web.js', '.js'],
     alias: {
       'react-native$': 'react-native-web',
+      'react-native-linear-gradient$': 'react-native-web-linear-gradient',
     },
   },
   module: {
@@ -62,11 +64,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
+    new HotModuleReplacementPlugin(),
+    new DefinePlugin({
       __DEV__: JSON.stringify(isProduction ? false : true),
     }),
   ],
+  devtool: 'inline-source-map',
   devServer: {
     // Force `index.html` to be loaded for any route
     historyApiFallback: true,

@@ -1,19 +1,16 @@
-import {Text, View} from 'react-native';
 import React from 'react';
-import {Outlet, useNavigate} from 'react-router-dom';
+import {Box, useColorModeValue} from 'native-base';
+import {Outlet} from 'react-router-dom';
+
+import {HeaderBar} from '@./common/ui';
 
 export function AppLayout() {
-  const navigate = useNavigate();
+  const screenBg = useColorModeValue('light.200', 'dark.100');
 
   return (
-    <>
-      <View>
-        <Text onPress={() => navigate('/')}>Home</Text>
-        <Text onPress={() => navigate('/about')}>About</Text>
-      </View>
+    <Box flex="1" bg={screenBg}>
+      <HeaderBar />
       <Outlet />
-    </>
+    </Box>
   );
 }
-
-export default AppLayout;
