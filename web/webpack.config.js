@@ -1,9 +1,10 @@
 const path = require("path")
-const { HotModuleReplacementPlugin, DefinePlugin } = require("webpack")
+const { DefinePlugin } = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 const appDirectory = path.resolve(__dirname, "..")
 const { presets, plugins } = require(`${appDirectory}/babel.config.js`)
+
 const isProduction = process.env.NODE_ENV === "production"
 
 const compileNodeModules = [
@@ -64,7 +65,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "index.html")
         }),
-        new HotModuleReplacementPlugin(),
         new DefinePlugin({
             __DEV__: JSON.stringify(isProduction ? false : true)
         })
