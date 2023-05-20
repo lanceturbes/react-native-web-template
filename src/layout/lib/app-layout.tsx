@@ -2,7 +2,7 @@ import {Text, View} from 'react-native';
 import React from 'react';
 import {Outlet, useNavigate} from 'react-router-dom';
 
-export default function AppLayout() {
+export function AppLayout() {
   const navigate = useNavigate();
 
   return (
@@ -15,3 +15,5 @@ export default function AppLayout() {
     </>
   );
 }
+
+export default AppLayout;

@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const appDirectory = path.resolve(__dirname, '..');
-const {presets} = require(`${appDirectory}/babel.config.js`);
+const {presets, plugins} = require(`${appDirectory}/babel.config.js`);
 const isProduction = process.env.NODE_ENV === 'production';
 
 const compileNodeModules = [
@@ -25,7 +25,7 @@ const babelLoaderConfiguration = {
     options: {
       cacheDirectory: true,
       presets,
-      plugins: ['react-native-web'],
+      plugins: [...plugins, 'react-native-web'],
     },
   },
 };

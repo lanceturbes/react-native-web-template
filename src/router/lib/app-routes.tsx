@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-import AppLayout from './app-layout';
-import HomeScreen from './home-screen';
-import AboutScreen from './about-screen';
+import {AppLayout} from '@./layout';
+import {HomeScreen} from '@./feature/home';
+import {AboutScreen} from '@./feature/about';
 
-export default function AppRoutes() {
+export function AppRoutes() {
   return (
     <Routes>
       <Route element={<AppLayout />}>
@@ -14,3 +14,5 @@ export default function AppRoutes() {
     </Routes>
   );
 }
+
+export default AppRoutes;
