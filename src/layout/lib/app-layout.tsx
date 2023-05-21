@@ -12,7 +12,9 @@ export function AppLayout() {
         <Box bg={screenBg} flex="1">
             {Platform.OS === "web" ? <HeaderBar /> : <AppBar />}
             <ScrollView flex="1">
-                <Outlet />
+                <Box py="3">
+                    <Outlet />
+                </Box>
             </ScrollView>
             {Platform.OS !== "web" && <TabBar />}
         </Box>
