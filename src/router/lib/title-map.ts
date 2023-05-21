@@ -1,6 +1,7 @@
 export const titleMap = {
     "/": "Home",
-    "/about": "About"
+    "/about": "About",
+    "/settings": "Settings"
 } as const
 
 export default titleMap

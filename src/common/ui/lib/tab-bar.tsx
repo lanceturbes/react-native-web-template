@@ -1,4 +1,10 @@
-import { HStack, IconButton, InfoIcon, useColorModeValue } from "native-base"
+import {
+    HamburgerIcon,
+    HStack,
+    IconButton,
+    InfoIcon,
+    useColorModeValue
+} from "native-base"
 import React from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 
@@ -25,6 +31,12 @@ export function TabBar() {
             <IconButton
                 onPress={() => handleLinkPress("/about")}
                 icon={<InfoIcon />}
+                _icon={iconStyle}
+                colorScheme="muted"
+            />
+            <IconButton
+                onPress={() => handleLinkPress("/settings")}
+                icon={<HamburgerIcon />}
                 _icon={iconStyle}
                 colorScheme="muted"
             />

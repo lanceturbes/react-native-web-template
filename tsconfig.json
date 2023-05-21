@@ -7,6 +7,7 @@
             "@./common/ui": ["./src/common/ui/index.ts"],
             "@./feature/about": ["./src/feature/about/index.ts"],
             "@./feature/home": ["src/feature/home/index.ts"],
+            "@./feature/settings": ["src/feature/settings/index.ts"],
             "@./layout": ["./src/layout/index.ts"],
             "@./router": ["./src/router/index.ts"],
             "@./theme": ["./src/theme/index.ts"]
