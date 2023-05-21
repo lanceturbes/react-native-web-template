@@ -16,6 +16,9 @@ export function NavLink({ to, children, ...rest }: NavLinkProps) {
     const color = useNavLinkColor(isActive)
 
     function handlePress() {
+        if (isActive) {
+            return
+        }
         navigate(to)
     }
 
